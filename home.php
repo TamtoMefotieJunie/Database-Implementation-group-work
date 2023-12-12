@@ -56,11 +56,11 @@ if (isset($_SESSION["username"])) {
                         <tr>
                             <td><?php echo $row['username']?></td>
                             <td><?php 
-                            // if($row['age'] == null){
-                            //     echo 'Null';
-                            // }else{
-                            //     echo $row['age'];
-                            // } ?></td>
+                            if($row['age'] == null){
+                                echo 'Null';
+                            }else{
+                                echo $row['age'];
+                            } ?></td>
                             <td><?php 
                             if($row['telephon'] == null){
                                 echo 'Null';
