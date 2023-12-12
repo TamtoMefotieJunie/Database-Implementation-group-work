@@ -93,11 +93,13 @@ class Member
             $age = $_POST['age'];
             $phone = $_POST['phone'];
             $query = 'INSERT INTO user (username, password, email ,telephon ,age) VALUES (?, ?, ? ,? ,?)';
-            $paramType = 'sss';
+            $paramType = 'sssss';
             $paramValue = array(
                 $_POST["username"],
                 $hashedPassword,
-                $_POST["email"]
+                $_POST["email"],
+                $phone,
+                $age
             );
             $memberId = $this->ds->insert($query, $paramType, $paramValue);
             if (! empty($memberId)) {
