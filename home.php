@@ -22,13 +22,57 @@ if (isset($_SESSION["username"])) {
 	rel="stylesheet" />
 <link href="user-registration.css" type="text/css"
 	rel="stylesheet" />
+    
+    
 </HEAD>
 <BODY>
+    <style>
+        button{
+            text-transform: uppercase;
+           font-weight: 600;
+           border-radius: 10px 0 10px 0 ;
+        }
+        button:hover{
+            color: white;
+        }
+        .btn1{
+            background : red;
+            padding: 12px;
+            border: none;
+            
+            
+        }
+        .btn2{
+            background : blue;
+            padding: 12px;
+            border: none;
+            margin-left: 10px;
+        }
+        .btn3{
+            background : green;
+            padding: 12px;
+            border: none;
+            margin-left: 10px;
+        }
+        .btn4{
+            background : yellow;
+            padding: 12px;
+            border: none;
+            margin-left: 10px;
+        }
+        .btn5{
+            background : pink;
+            padding: 12px;
+            border: none;
+            margin-left: 10px;
+        }
+    </style>
 	<div class="phppot-container">
 		<div class="page-header">
 			<span class="login-signup"><a href="logout.php">Logout</a></span>
 		</div>
 		<div class="page-content">Welcome 
+            
             <table border='1'>
                 <tr>
                     <th>Name</th>
@@ -80,5 +124,22 @@ if (isset($_SESSION["username"])) {
             ?>
             </table></div>
 	</div>
+    <!-- <form method = "post" action="Innerjoin.php">
+        <button type= "submit" name="join_type" value="inner"  link='./outerjoin'>Inner Join</button>
+        <button type= "submit" name="join_type" value="inner">Inner Join</button>
+        <button type= "submit" name="join_type" value="inner">Inner Join</button>
+        <button type= "submit" name="join_type" value="inner">Inner Join</button>
+      
+      
+        </form> -->
+        <center>
+
+            <a href='./JOINS/crossjoin.php'><button class="btn1">cross join</button></a> 
+            <a href='./JOINS/fulljoin.php'><button class="btn2">full join</button></a> 
+            <a href='./JOINS/innerjoin.php'><button class="btn3">inner join</button></a> 
+            <a href='./JOINS/leftouter.php'><button class="btn4">left outer</button></a> 
+            <a href='./JOINS/rightouterjoin.php'><button class="btn5">right outer</button></a> 
+        </center>
+
 </BODY>
 </HTML>
