@@ -31,7 +31,7 @@ if (! empty($_POST["login-btn"])) {
 				<div class="error-msg"><?php echo $loginResult;?></div>
 				<?php }?>
                 <div class="form-label">
-								Username<span class="required error" id="useremail-info"></span>
+								Useremail<span class="required error" id="useremail-info"></span>
 							</div>
             <input type="text" placeholder="Adresse e-mail ou numero de tel" 
                 name="useremail" id="useremail">

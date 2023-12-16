@@ -112,12 +112,12 @@ class Member
         return $response;
     }
 
-    public function getMember($username)
+    public function getMember($useremail)
     {
-        $query = 'SELECT * FROM user where username = ?';
+        $query = 'SELECT * FROM user where email = ?';
         $paramType = 's';
         $paramValue = array(
-            $username
+            $useremail
         );
         $memberRecord = $this->ds->select($query, $paramType, $paramValue);
         return $memberRecord;
@@ -148,12 +148,12 @@ class Member
             // login sucess so store the member's username in
             // the session
             session_start();
-            $_SESSION["username"] = $memberRecord[0]["username"];
+            $_SESSION["useremail"] = $memberRecord[0]["useremail"];
             session_write_close();
             $url = "./home.php";
             header("Location: $url");
         } else if ($loginPassword == 0) {
-            $loginStatus = "Invalid username or password.";
+            $loginStatus = "Invalid useremail or password.";
             return $loginStatus;
         }
     }
