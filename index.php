@@ -46,7 +46,7 @@ if (! empty($_POST["login-btn"])) {
         </form>
         <a href="#" class="link">Mot de passe oublie ?</a>
         <div class="line"></div>
-        <a href="register.php" class="new">SIGN IN</a>
+        <a href="register.php" class="new">CREATE AN ACCOUNT</a>
         </div>
         <p class="small-text"><b>creer une page</b>pour une celebrite, une marque ou une <br>entreprise.</p>
     </div>
